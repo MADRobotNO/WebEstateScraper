@@ -1,0 +1,17 @@
+{%extends "layout.html"%}
+{%block content%}
+<div class="hamar">
+    <h3>Average price in Hamar area without Hamar city, Ottestad and Brumunddal is for
+        today: {{average_price}}</h3>
+    <h3>Average price per kvm is: {{average_price_per_kvm}}</h3>
+    <h3>Based on {{ num_of_el }} prices</h3>
+    <br>
+    <p><a href="{{ url_for('data_whamar') }}">Data</a> </p>
+    <p>Raw data:</p>
+    <ul>
+        <li>{{ list_of_prices }}</li>
+        <br>
+        <li>{{ list_of_prices_per_kvm }}</li>
+    </ul>
+</div>
+{%endblock%}

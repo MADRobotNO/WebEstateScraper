@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+<header>
+    <div class="header">
+        <h1 class="logo">Eiendom prisutvikling på søre sunnmøre</h1>
+        <p>App by MAD Robot - Martin Agnar Dahl</p>
+        <p>Today is: {{ today_is }}</p>
+    </div>
+    <br>
+    <div class="table">
+        {%block content%}
+        {%endblock%}
+    </div>
+</header>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{%extends "layout.html"%}
+{%block content%}
+
+<style>
+
+table, th, td {
+    border: 1px solid black;
+}
+td, th {
+    text-align: center;
+}
+
+</style>
+
+<div class="data">
+    <table style="width:100%">
+        <tr>
+            {%for item in col:%}
+            <h3><th>{{ item }}</th></h3>
+            {%endfor%}
+        </tr>
+        {%for items in df:%}
+            <tr>
+                {%for i in items:%}
+                    <td>{{ i }}</td>
+                {%endfor%}
+            </tr>
+        {%endfor%}
+    </table>
+</div>
+{%endblock%}

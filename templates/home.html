@@ -1,0 +1,14 @@
+{%extends "layout.html"%}
+{%block content%}
+<div class="home">
+    <h2>Welcome!</h2>
+    <form>
+        <select onchange="location=this.value">
+            <option value="" selected>Select location</option>
+            <option value="volda">Sunnmøre</option>
+            <option value="hamar">Vest-Hedmark</option>
+        </select>
+        <br>
+    </form>
+</div>
+{%endblock%}
