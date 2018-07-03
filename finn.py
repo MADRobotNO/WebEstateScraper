@@ -107,14 +107,18 @@ for page in range(1, page_nr):
                 m.append(price_per_kvm)
 
             #bedroom m[5]
-            bedroom = item.find("li", {"data-automation-id":"bottomRow2"}).text
-            bedroom_in_text = bedroom.find("soverom")
-            if bedroom_in_text == -1:
-                bedroom = None
-                m.append(bedroom)
-            else:
-                bedroom = bedroom[-9:-8]
-                m.append(bedroom)
+            if item.find("li", {"data-automation-id": "bottomRow2"}) is not None:
+
+                bedroom = item.find("li", {"data-automation-id": "bottomRow2"}).text
+                bedroom_in_text = bedroom.find("soverom")
+
+                if bedroom_in_text == -1:
+                    bedroom = None
+                    m.append(bedroom)
+                else:
+                    bedroom = bedroom[-9:-8]
+                    m.append(bedroom)
+
                 
             #date m[6]
             m.append(date)
